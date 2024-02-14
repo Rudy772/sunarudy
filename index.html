@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine's Day Website</title>
+  <style>
+    body {
+      background-color: #f7d9e3;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    h1 {
+      color: #e6005c;
+      margin-top: 50px;
+      font-size: 36px;
+    }
+    
+    p {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    
+    .heart {
+      color: #e6005c;
+      font-size: 100px;
+      margin-top: 50px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #e6005c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .button:hover {
+      background-color: #ff4d8f;
+    }
+    
+    .big-heart {
+      color: #e6005c;
+      font-size: 200px;
+      margin-top: 50px;
+    }
+    
+    .thank-you {
+      color: #e6005c;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    .container-inner {
+      max-width: 600px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="container-inner">
+      <h1>Will you be my Valentine, Suna?</h1>
+      <p>Spread the love and celebrate this special day with your loved ones.</p>
+      <p>Here's a heart for you:</p>
+      <div class="heart">&hearts;</div>
+      
+      <div>
+        <button class="button" onclick="yesClicked()">Yes</button>
+        <button class="button" onclick="noClicked()">No</button>
+      </div>
+      
+      <div id="bigHeartContainer" style="display: none;">
+        <div class="big-heart">&hearts;</div>
+        <div class="thank-you">THANK YOU BAE 😘 😘</div>
+      </div>
+    </div>
+    <div class="footer">Made with ❤️ by Your Rudy</div>
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.getElementById("bigHeartContainer").style.display = "block";
+    }
+
+    function noClicked() {
+      var text = document.createElement("p");
+      text.innerHTML = "PLEASE 😢 !";
+      document.body.appendChild(text);
+    }
+  </script>
+</body>
+</html>
